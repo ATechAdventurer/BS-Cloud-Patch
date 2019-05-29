@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
       
       jV.on('exit', function (code) {
         console.log('child process exited with code ' + code.toString());
+        res.send("Done")
       });
-    res.send("<h1>Hi</h1>")
 })
 
 app.listen(process.env.PORT || 8080)
